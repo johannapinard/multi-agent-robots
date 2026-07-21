@@ -1,0 +1,14 @@
+action/Action.action
+action/Action.idl
+msg/Alert.idl
+msg/Alert.msg
+msg/Answer.idl
+msg/Answer.msg
+msg/Info.idl
+msg/Info.msg
+msg/Introduction.idl
+msg/Introduction.msg
+msg/Request.idl
+msg/Request.msg
+srv/GetPose.idl
+srv/GetPose.srv

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_generator_py/communication_msgs/communication_msgs_s__rosidl_typesupport_c.so" "TARGETS" "communication_msgs_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/communication_msgs")

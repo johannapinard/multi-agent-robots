@@ -1,0 +1,37 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/action/detail/action__type_support_c.cpp.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/action/detail/action__type_support_c.cpp.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/alert__type_support_c.cpp.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/alert__type_support_c.cpp.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/answer__type_support_c.cpp.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/answer__type_support_c.cpp.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/info__type_support_c.cpp.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/info__type_support_c.cpp.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/introduction__type_support_c.cpp.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/introduction__type_support_c.cpp.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/request__type_support_c.cpp.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/request__type_support_c.cpp.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/srv/detail/get_pose__type_support_c.cpp.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/srv/detail/get_pose__type_support_c.cpp.o.d"
+  "libcommunication_msgs__rosidl_typesupport_fastrtps_c.pdb"
+  "libcommunication_msgs__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/action/detail/action__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/action/detail/action__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/alert__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/alert__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/answer__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/answer__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/info__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/info__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/introduction__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/introduction__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/request__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/request__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/srv/detail/get_pose__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/communication_msgs/srv/detail/get_pose__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

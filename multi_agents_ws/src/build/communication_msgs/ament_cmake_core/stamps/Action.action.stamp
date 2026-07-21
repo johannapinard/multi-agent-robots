@@ -1,0 +1,5 @@
+string type # communication_msg/Search, communication_msg/Pick
+---
+string color
+---
+geometry_msgs/Pose requested_pose

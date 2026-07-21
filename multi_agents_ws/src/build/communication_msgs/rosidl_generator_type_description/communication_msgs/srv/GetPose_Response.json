@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "communication_msgs/srv/GetPose_Response",
+      "fields": [
+        {
+          "name": "color",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "communication_msgs/srv/GetPose_Response",
+      "hash_string": "RIHS01_1b9d419a0c6e39cb0857a5239ce57d630379211c2040cad52141a79b9e340c6d"
+    }
+  ]
+}

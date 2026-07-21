@@ -1,0 +1,12 @@
+{
+  "package_name": "communication_msgs",
+  "non_idl_tuples": [
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/communication_msgs:msg/Alert.msg",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/communication_msgs:msg/Answer.msg",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/communication_msgs:msg/Info.msg",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/communication_msgs:msg/Request.msg",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/communication_msgs:msg/Introduction.msg",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/communication_msgs:srv/GetPose.srv",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/communication_msgs:action/Action.action"
+  ]
+}

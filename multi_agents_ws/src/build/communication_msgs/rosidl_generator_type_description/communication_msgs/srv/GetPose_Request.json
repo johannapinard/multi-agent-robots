@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "communication_msgs/srv/GetPose_Request",
+      "fields": [
+        {
+          "name": "item",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "communication_msgs/srv/GetPose_Request",
+      "hash_string": "RIHS01_d9f7f169681318fd943fca2dfb1aba71324aea930679c2d5aacf026d7bb28dc9"
+    }
+  ]
+}

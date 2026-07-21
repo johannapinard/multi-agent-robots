@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "communication_msgs__py",
+		"source" : "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/communication_msgs__py"
+	}
+}

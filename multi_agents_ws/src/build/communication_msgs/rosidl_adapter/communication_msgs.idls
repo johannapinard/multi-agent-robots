@@ -1,0 +1,7 @@
+/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Alert.idl
+/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Answer.idl
+/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Info.idl
+/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Request.idl
+/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Introduction.idl
+/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:srv/GetPose.idl
+/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:action/Action.idl

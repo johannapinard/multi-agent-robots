@@ -1,0 +1,395 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+-- Found shape_msgs: 5.3.8 (/opt/ros/jazzy/share/shape_msgs/cmake)
+-- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found PythonExtra: /usr/bin/python3  
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (2.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs
+[  2%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[  2%] Built target ament_cmake_python_symlink_communication_msgs
+running egg_info
+creating communication_msgs.egg-info
+writing communication_msgs.egg-info/PKG-INFO
+writing dependency_links to communication_msgs.egg-info/dependency_links.txt
+writing top-level names to communication_msgs.egg-info/top_level.txt
+writing manifest file 'communication_msgs.egg-info/SOURCES.txt'
+reading manifest file 'communication_msgs.egg-info/SOURCES.txt'
+writing manifest file 'communication_msgs.egg-info/SOURCES.txt'
+[  2%] Built target ament_cmake_python_build_communication_msgs_egg
+[  2%] Built target communication_msgs__rosidl_generator_type_description
+[  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  4%] Built target communication_msgs__rs
+[  4%] Built target communication_msgs__cpp
+[ 11%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/answer__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/request__description.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/request__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/alert__type_support.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/answer__type_support.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/info__description.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/alert__description.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/introduction__description.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/info__functions.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/request__type_support.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/introduction__functions.c.o[0m
+[ 18%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/introduction__type_support.c.o[0m
+[ 18%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/info__type_support.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/alert__functions.c.o[0m
+[ 21%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/msg/detail/answer__description.c.o[0m
+[ 21%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/srv/detail/get_pose__description.c.o[0m
+[ 22%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/srv/detail/get_pose__functions.c.o[0m
+[ 23%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/srv/detail/get_pose__type_support.c.o[0m
+[ 24%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/action/detail/action__description.c.o[0m
+[ 25%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/action/detail/action__functions.c.o[0m
+[ 26%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_c.dir/rosidl_generator_c/communication_msgs/action/detail/action__type_support.c.o[0m
+[ 27%] [32m[1mLinking C shared library libcommunication_msgs__rosidl_generator_c.so[0m
+[ 27%] Built target communication_msgs__rosidl_generator_c
+[ 31%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 31%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 31%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 31%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 32%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 33%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/communication_msgs/msg/request__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/communication_msgs/msg/info__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/communication_msgs/msg/answer__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/communication_msgs/msg/info__type_support.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/communication_msgs/msg/request__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/communication_msgs/msg/answer__type_support.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/communication_msgs/msg/introduction__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/communication_msgs/msg/alert__type_support.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/communication_msgs/msg/alert__type_support.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/communication_msgs/msg/introduction__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/communication_msgs/srv/get_pose__type_support.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/communication_msgs/srv/get_pose__type_support.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/communication_msgs/action/action__type_support.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/communication_msgs/action/action__type_support.cpp.o[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/communication_msgs/msg/detail/alert__type_support.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/communication_msgs/msg/detail/answer__type_support.cpp.o[0m
+[ 51%] [32m[1mLinking CXX shared library libcommunication_msgs__rosidl_typesupport_c.so[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/communication_msgs/msg/detail/info__type_support.cpp.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/communication_msgs/msg/detail/request__type_support.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/communication_msgs/msg/detail/introduction__type_support.cpp.o[0m
+[ 55%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/alert__type_support.c.o[0m
+[ 55%] Built target communication_msgs__rosidl_typesupport_c
+[ 56%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/answer__type_support.c.o[0m
+[ 57%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/info__type_support.c.o[0m
+[ 58%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/request__type_support.c.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/communication_msgs/srv/detail/get_pose__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/communication_msgs/action/detail/action__type_support.cpp.o[0m
+[ 62%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/introduction__type_support.c.o[0m
+[ 63%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/srv/detail/get_pose__type_support.c.o[0m
+[ 64%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/action/detail/action__type_support.c.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/communication_msgs/msg/detail/dds_fastrtps/alert__type_support.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/communication_msgs/msg/detail/dds_fastrtps/answer__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/communication_msgs/msg/detail/dds_fastrtps/info__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/communication_msgs/msg/detail/dds_fastrtps/introduction__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/communication_msgs/msg/detail/dds_fastrtps/request__type_support.cpp.o[0m
+[ 70%] [32m[1mLinking C shared library libcommunication_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/communication_msgs/srv/detail/dds_fastrtps/get_pose__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/alert__type_support_c.cpp.o[0m
+[ 72%] Built target communication_msgs__rosidl_typesupport_introspection_c
+[ 73%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/answer__type_support_c.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/communication_msgs/action/detail/dds_fastrtps/action__type_support.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/info__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/request__type_support_c.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/msg/detail/introduction__type_support_c.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/srv/detail/get_pose__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/communication_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/communication_msgs/action/detail/action__type_support_c.cpp.o[0m
+[ 81%] [32m[1mLinking CXX shared library libcommunication_msgs__rosidl_typesupport_cpp.so[0m
+[ 81%] Built target communication_msgs__rosidl_typesupport_cpp
+[ 82%] [32m[1mLinking CXX shared library libcommunication_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 82%] Built target communication_msgs__rosidl_typesupport_introspection_cpp
+[ 83%] [32m[1mLinking CXX shared library libcommunication_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 83%] Built target communication_msgs__rosidl_typesupport_fastrtps_c
+[ 84%] [32m[1mLinking CXX shared library libcommunication_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 84%] Built target communication_msgs__rosidl_typesupport_fastrtps_cpp
+[ 84%] Built target communication_msgs
+[ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 85%] Built target communication_msgs__py
+[ 92%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_py.dir/rosidl_generator_py/communication_msgs/msg/_info_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_py.dir/rosidl_generator_py/communication_msgs/msg/_answer_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_py.dir/rosidl_generator_py/communication_msgs/srv/_get_pose_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_py.dir/rosidl_generator_py/communication_msgs/msg/_request_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_py.dir/rosidl_generator_py/communication_msgs/msg/_alert_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_py.dir/rosidl_generator_py/communication_msgs/action/_action_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/communication_msgs__rosidl_generator_py.dir/rosidl_generator_py/communication_msgs/msg/_introduction_s.c.o[0m
+[ 93%] [32m[1mLinking C shared library libcommunication_msgs__rosidl_generator_py.so[0m
+[ 93%] Built target communication_msgs__rosidl_generator_py
+[ 96%] [32mBuilding C object CMakeFiles/communication_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/communication_msgs/_communication_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/communication_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/communication_msgs/_communication_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/communication_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/communication_msgs/_communication_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[ 98%] [32m[1mLinking C shared module rosidl_generator_py/communication_msgs/communication_msgs_s__rosidl_typesupport_c.so[0m
+[ 98%] [32m[1mLinking C shared module rosidl_generator_py/communication_msgs/communication_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[100%] [32m[1mLinking C shared module rosidl_generator_py/communication_msgs/communication_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[100%] Built target communication_msgs_s__rosidl_typesupport_c
+[100%] Built target communication_msgs_s__rosidl_typesupport_introspection_c
+[100%] Built target communication_msgs_s__rosidl_typesupport_fastrtps_c
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/ament_index/resource_index/rosidl_interfaces/communication_msgs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Alert.json
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Answer.json
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Info.json
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Request.json
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Introduction.json
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/srv/GetPose.json
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/action/Action.json
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/action.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__functions.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__struct.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__type_support.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/alert.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/answer.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__functions.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__struct.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__type_support.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__functions.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__struct.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__type_support.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__functions.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__struct.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__type_support.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__functions.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__struct.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__type_support.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__functions.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__struct.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__type_support.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/info.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/introduction.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/request.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__functions.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__struct.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__type_support.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/get_pose.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/environment/library_path.sh
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/environment/library_path.dsv
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/action.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__builder.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__struct.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__traits.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__type_support.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/alert.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/answer.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__builder.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__struct.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__traits.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__type_support.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__builder.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__struct.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__traits.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__type_support.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__builder.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__struct.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__traits.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__type_support.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__builder.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__struct.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__traits.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__type_support.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__builder.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__struct.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__traits.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__type_support.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/info.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/introduction.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/request.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__builder.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__struct.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__traits.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__type_support.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/get_pose.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/action/detail/action__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/alert__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/answer__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/info__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/introduction__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/msg/detail/request__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/include/communication_msgs/communication_msgs/srv/detail/get_pose__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/environment/pythonpath.sh
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/environment/pythonpath.dsv
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs-0.0.0-py3.12.egg-info/top_level.txt
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/__init__.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/_communication_msgs_s.ep.rosidl_typesupport_c.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/_communication_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/_communication_msgs_s.ep.rosidl_typesupport_introspection_c.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/action/__init__.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/action/_action.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/action/_action_s.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/communication_msgs_s__rosidl_typesupport_c.so
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/communication_msgs_s__rosidl_typesupport_fastrtps_c.so
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/communication_msgs_s__rosidl_typesupport_introspection_c.so
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/__init__.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_alert.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_alert_s.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_answer.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_answer_s.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_info.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_info_s.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_introduction.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_introduction_s.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_request.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_request_s.c
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/srv/__init__.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/srv/_get_pose.py
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/srv/_get_pose_s.c
+-- Up-to-date symlink: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/communication_msgs_s__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date symlink: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/communication_msgs_s__rosidl_typesupport_introspection_c.so
+-- Up-to-date symlink: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/communication_msgs_s__rosidl_typesupport_c.so
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/ament_index/resource_index/rust_packages/communication_msgs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/Cargo.toml
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/build.rs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/src/action.rs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/src/action/rmw.rs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/src/lib.rs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/src/msg.rs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/src/msg/rmw.rs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/src/srv.rs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/rust/src/srv/rmw.rs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Alert.idl
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Answer.idl
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Info.idl
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Request.idl
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Introduction.idl
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/srv/GetPose.idl
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/action/Action.idl
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Alert.msg
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Answer.msg
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Info.msg
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Request.msg
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/msg/Introduction.msg
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/srv/GetPose.srv
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/action/Action.action
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/ament_index/resource_index/package_run_dependencies/communication_msgs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/ament_index/resource_index/parent_prefix_path/communication_msgs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/environment/ament_prefix_path.sh
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/environment/ament_prefix_path.dsv
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/environment/path.sh
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/environment/path.dsv
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/local_setup.bash
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/local_setup.sh
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/local_setup.zsh
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/local_setup.dsv
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/package.dsv
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/ament_index/resource_index/packages/communication_msgs
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/rosidl_cmake-extras.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgsConfig.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgsConfig-version.cmake
+-- Symlinking: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/package.xml
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_generator_c.so
+-- Set non-toolchain portion of runtime path of "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_generator_c.so" to ""
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_c.so" to ""
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_typesupport_cpp.so" to ""
+Listing '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/__init__.py'...
+Listing '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/action'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/action/__init__.py'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/action/_action.py'...
+Listing '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/__init__.py'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_alert.py'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_answer.py'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_info.py'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_introduction.py'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/msg/_request.py'...
+Listing '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/srv'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/srv/__init__.py'...
+Compiling '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages/communication_msgs/srv/_get_pose.py'...
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_generator_py.so
+-- Set non-toolchain portion of runtime path of "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/libcommunication_msgs__rosidl_generator_py.so" to ""
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgs__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/communication_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_generator_pyExport.cmake
+-- Installing: /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/share/communication_msgs/cmake/export_communication_msgs__rosidl_generator_pyExport-noconfig.cmake

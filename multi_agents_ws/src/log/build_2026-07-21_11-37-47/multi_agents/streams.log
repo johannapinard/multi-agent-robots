@@ -1,0 +1,18 @@
+[0.698s] Invoking command in '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages:/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages:/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents:/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build --no-deps symlink_data
+[0.876s] running develop
+[0.982s] running egg_info
+[0.991s] writing multi_agents.egg-info/PKG-INFO
+[0.991s] writing dependency_links to multi_agents.egg-info/dependency_links.txt
+[0.991s] writing entry points to multi_agents.egg-info/entry_points.txt
+[0.991s] writing requirements to multi_agents.egg-info/requires.txt
+[0.991s] writing top-level names to multi_agents.egg-info/top_level.txt
+[1.011s] reading manifest file 'multi_agents.egg-info/SOURCES.txt'
+[1.013s] writing manifest file 'multi_agents.egg-info/SOURCES.txt'
+[1.024s] running build_ext
+[1.025s] Creating /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi-agents.egg-link (link to .)
+[1.025s] Installing RB3_robot_node script to /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/multi_agents
+[1.025s] Installing XGOLite_robot_node script to /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/multi_agents
+[1.026s] 
+[1.026s] Installed /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents
+[1.026s] running symlink_data
+[1.056s] Invoked command in '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages:/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/communication_msgs/lib/python3.12/site-packages:/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents:/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build --no-deps symlink_data

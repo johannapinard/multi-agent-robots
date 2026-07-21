@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-0648ddb3a8ad233a906e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "communication_msgs__py",
+					"jsonFile" : "directory-communication_msgs__py-04cd7afb382c2918db31.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/communication_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "communication_msgs__rs",
+					"jsonFile" : "directory-communication_msgs__rs-640e9df0cb40a6716805.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/communication_msgs__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "communication_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_communication_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_communication_msgs_egg-7c4bc13c02461e95e0c1.json",
+					"name" : "ament_cmake_python_build_communication_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_communication_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_communication_msgs-e70642307f9707ca6f10.json",
+					"name" : "ament_cmake_python_symlink_communication_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs-4f4d8bb19bda8db5e9ad.json",
+					"name" : "communication_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__cpp-3454bb31722ffd769c5f.json",
+					"name" : "communication_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "communication_msgs__py::@c966344439fe8efc9cb1",
+					"jsonFile" : "target-communication_msgs__py-2a1e7f18e901fff6090b.json",
+					"name" : "communication_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_generator_c-bb0dbe3d9e318abd0cc8.json",
+					"name" : "communication_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_generator_py-a024a17f8fa5f93e43ab.json",
+					"name" : "communication_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_generator_type_description-7598b9fe9ddcf3f3fc57.json",
+					"name" : "communication_msgs__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_typesupport_c-02b68dec1f58bbdfe13d.json",
+					"name" : "communication_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_typesupport_cpp-9a2b4d064269f910f61c.json",
+					"name" : "communication_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_typesupport_fastrtps_c-9f74a1d37a1af12391a7.json",
+					"name" : "communication_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_typesupport_fastrtps_cpp-9e0fd6c405279ed294d5.json",
+					"name" : "communication_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_typesupport_introspection_c-332a2f58cda0c8f16b16.json",
+					"name" : "communication_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs__rosidl_typesupport_introspection_cpp-2b6fca9ad23a601663d0.json",
+					"name" : "communication_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "communication_msgs__rs::@c1799a65abdc82dbb018",
+					"jsonFile" : "target-communication_msgs__rs-e016c639d862561063f7.json",
+					"name" : "communication_msgs__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs_s__rosidl_typesupport_c-27034f0ea514a389beff.json",
+					"name" : "communication_msgs_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs_s__rosidl_typesupport_fastrtps_c-3fd6e19c60ec77c48d40.json",
+					"name" : "communication_msgs_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs_s__rosidl_typesupport_introspection_c-21cd189d9e977feb595e.json",
+					"name" : "communication_msgs_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "communication_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-communication_msgs_uninstall-b182c0e2a95b716adef6.json",
+					"name" : "communication_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-3c212241e4600c4556b7.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs",
+		"source" : "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/communication_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

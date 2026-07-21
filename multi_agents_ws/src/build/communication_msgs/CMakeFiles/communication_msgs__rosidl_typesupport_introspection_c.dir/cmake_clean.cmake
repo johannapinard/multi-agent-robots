@@ -1,0 +1,37 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/action/detail/action__type_support.c.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/action/detail/action__type_support.c.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/alert__type_support.c.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/alert__type_support.c.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/answer__type_support.c.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/answer__type_support.c.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/info__type_support.c.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/info__type_support.c.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/introduction__type_support.c.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/introduction__type_support.c.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/request__type_support.c.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/msg/detail/request__type_support.c.o.d"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/srv/detail/get_pose__type_support.c.o"
+  "CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/communication_msgs/srv/detail/get_pose__type_support.c.o.d"
+  "libcommunication_msgs__rosidl_typesupport_introspection_c.pdb"
+  "libcommunication_msgs__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/communication_msgs/action/detail/action__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/communication_msgs/action/detail/action__type_support.c"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/alert__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/alert__type_support.c"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/answer__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/answer__type_support.c"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/info__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/info__type_support.c"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/introduction__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/introduction__type_support.c"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/request__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/communication_msgs/msg/detail/request__type_support.c"
+  "rosidl_typesupport_introspection_c/communication_msgs/srv/detail/get_pose__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/communication_msgs/srv/detail/get_pose__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/communication_msgs__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

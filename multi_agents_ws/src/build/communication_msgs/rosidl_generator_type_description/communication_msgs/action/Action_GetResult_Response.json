@@ -1,0 +1,56 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "communication_msgs/action/Action_GetResult_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "communication_msgs/action/Action_Result"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "communication_msgs/action/Action_Result",
+        "fields": [
+          {
+            "name": "color",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "communication_msgs/action/Action_GetResult_Response",
+      "hash_string": "RIHS01_8563ca10591d18593e7dd450948dfa38596f7ad318af3e3de27e7f938545af88"
+    },
+    {
+      "type_name": "communication_msgs/action/Action_Result",
+      "hash_string": "RIHS01_2bdb45b761a25a4b013ca16537aa989cf792f8b2ba6597a27633d0355752e422"
+    }
+  ]
+}

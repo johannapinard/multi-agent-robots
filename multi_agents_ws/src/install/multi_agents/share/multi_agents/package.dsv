@@ -1,0 +1,9 @@
+source;share/multi_agents/hook/pythonpath.ps1
+source;share/multi_agents/hook/pythonpath.dsv
+source;share/multi_agents/hook/pythonpath.sh
+source;share/multi_agents/hook/ament_prefix_path.ps1
+source;share/multi_agents/hook/ament_prefix_path.dsv
+source;share/multi_agents/hook/ament_prefix_path.sh
+source;../../build/multi_agents/share/multi_agents/hook/pythonpath_develop.ps1
+source;../../build/multi_agents/share/multi_agents/hook/pythonpath_develop.dsv
+source;../../build/multi_agents/share/multi_agents/hook/pythonpath_develop.sh

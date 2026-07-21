@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from communication_msgs/msg/Answer.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module communication_msgs {
+  module msg {
+    struct Answer {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "should be the same as request id")
+      int32 id;
+
+      string to;
+
+      @verbatim (language="comment", text=
+        "0 error, 1 success, 2 ongoing")
+      int32 response_code;
+
+      @verbatim (language="comment", text=
+        "move, scan etc")
+      string current_action;
+
+      @verbatim (language="comment", text=
+        "human-readable log message")
+      string details;
+    };
+  };
+};

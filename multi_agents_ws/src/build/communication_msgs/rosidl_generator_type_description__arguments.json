@@ -1,0 +1,27 @@
+{
+  "package_name": "communication_msgs",
+  "output_dir": "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_generator_type_description/communication_msgs",
+  "idl_tuples": [
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Alert.idl",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Answer.idl",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Info.idl",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Request.idl",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:msg/Introduction.idl",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:srv/GetPose.idl",
+    "/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/communication_msgs/rosidl_adapter/communication_msgs:action/Action.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "shape_msgs:/opt/ros/jazzy/share/shape_msgs",
+    "moveit_msgs:/opt/ros/jazzy/share/moveit_msgs",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "sensor_msgs:/opt/ros/jazzy/share/sensor_msgs",
+    "object_recognition_msgs:/opt/ros/jazzy/share/object_recognition_msgs",
+    "octomap_msgs:/opt/ros/jazzy/share/octomap_msgs",
+    "trajectory_msgs:/opt/ros/jazzy/share/trajectory_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

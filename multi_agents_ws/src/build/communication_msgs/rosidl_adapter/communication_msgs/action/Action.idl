@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from communication_msgs/action/Action.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+
+module communication_msgs {
+  module action {
+    struct Action_Goal {
+      @verbatim (language="comment", text=
+        "communication_msg/Search, communication_msg/Pick")
+      string type;
+    };
+    struct Action_Result {
+      string color;
+    };
+    struct Action_Feedback {
+      geometry_msgs::msg::Pose requested_pose;
+    };
+  };
+};
