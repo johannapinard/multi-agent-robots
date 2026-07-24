@@ -1,0 +1,3 @@
+[console_scripts]
+RB3_robot_node = multi_agents.robots.RB3:main
+XGOLite_robot_node = multi_agents.robots.XGOLite:main

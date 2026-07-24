@@ -1,0 +1,50 @@
+running develop
+Removing /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi-agents.egg-link (link to .)
+running egg_info
+writing ../build/multi_agents/multi_agents.egg-info/PKG-INFO
+writing dependency_links to ../build/multi_agents/multi_agents.egg-info/dependency_links.txt
+writing entry points to ../build/multi_agents/multi_agents.egg-info/entry_points.txt
+writing requirements to ../build/multi_agents/multi_agents.egg-info/requires.txt
+writing top-level names to ../build/multi_agents/multi_agents.egg-info/top_level.txt
+reading manifest file '../build/multi_agents/multi_agents.egg-info/SOURCES.txt'
+writing manifest file '../build/multi_agents/multi_agents.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build
+creating /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib
+creating /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents
+copying multi_agents/__init__.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents
+copying multi_agents/action_client.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents
+copying multi_agents/get_pose_client.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents
+creating /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots
+copying multi_agents/robots/__init__.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots
+copying multi_agents/robots/XGOLite.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots
+copying multi_agents/robots/Robot.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots
+copying multi_agents/robots/RB3.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots
+running install
+running install_lib
+creating /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents
+creating /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots
+copying /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots/__init__.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots
+copying /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots/XGOLite.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots
+copying /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots/Robot.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots
+copying /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/robots/RB3.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots
+copying /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/__init__.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents
+copying /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/action_client.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents
+copying /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/build/lib/multi_agents/get_pose_client.py -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents
+byte-compiling /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots/XGOLite.py to XGOLite.cpython-312.pyc
+byte-compiling /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots/Robot.py to Robot.cpython-312.pyc
+byte-compiling /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/robots/RB3.py to RB3.cpython-312.pyc
+byte-compiling /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/action_client.py to action_client.cpython-312.pyc
+byte-compiling /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents/get_pose_client.py to get_pose_client.cpython-312.pyc
+running install_data
+copying resource/multi_agents -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/share/ament_index/resource_index/packages
+copying package.xml -> /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/share/multi_agents
+running install_egg_info
+Copying ../build/multi_agents/multi_agents.egg-info to /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/python3.12/site-packages/multi_agents-0.0.0-py3.12.egg-info
+running install_scripts
+Installing RB3_robot_node script to /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/multi_agents
+Installing XGOLite_robot_node script to /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/install/multi_agents/lib/multi_agents
+writing list of installed files to '/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/multi_agents_ws/src/build/multi_agents/install.log'

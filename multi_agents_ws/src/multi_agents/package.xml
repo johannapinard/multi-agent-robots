@@ -13,7 +13,7 @@
   <depend>shape_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>action_msgs</depend>
-  <depend>xgo_ros</depend>
+  <exec_depend>xgo_ros</exec_depend>
   <exec_depend>communication_msgs</exec_depend>
   <exec_depend>ament_cmake</exec_depend>
   <exec_depend>ament_cmake_python</exec_depend> 
