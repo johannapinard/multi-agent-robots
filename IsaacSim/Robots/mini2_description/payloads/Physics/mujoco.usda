@@ -1,0 +1,481 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "mini2_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp1fcw11os/mini2_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mini2_description_kv41_r6w/usdex_mini2_description/mini2_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mini2_description_kv41_r6w/temp_mini2_description/mini2_description.usd
+
+
+Generated from Composed Stage of root layer /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/IsaacSim/Robots/mini2_description_1/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "mini2_description"
+{
+    over "Physics"
+    {
+        def MjcActuator "tn__13_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__13_Joint_>
+        }
+
+        def MjcActuator "tn__12_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__12_Joint_>
+        }
+
+        def MjcActuator "tn__11_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__11_Joint_>
+        }
+
+        def MjcActuator "tn__23_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__23_Joint_>
+        }
+
+        def MjcActuator "tn__22_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__22_Joint_>
+        }
+
+        def MjcActuator "tn__21_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__21_Joint_>
+        }
+
+        def MjcActuator "tn__33_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__33_Joint_>
+        }
+
+        def MjcActuator "tn__32_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__32_Joint_>
+        }
+
+        def MjcActuator "tn__31_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__31_Joint_>
+        }
+
+        def MjcActuator "tn__43_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__43_Joint_>
+        }
+
+        def MjcActuator "tn__42_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__42_Joint_>
+        }
+
+        def MjcActuator "tn__41_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__41_Joint_>
+        }
+
+        def MjcActuator "tn__53_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__53_Joint_>
+        }
+
+        def MjcActuator "tn__52_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__52_Joint_>
+        }
+
+        def MjcActuator "tn__51_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__51_Joint_>
+        }
+
+        def MjcActuator "tn__50_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__50_Joint_>
+        }
+
+        def MjcActuator "tn__500_Joint__actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </mini2_description/Physics/tn__500_Joint_>
+        }
+
+        over "tn__13_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__12_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__11_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__23_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__22_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__21_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__33_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__32_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__31_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__43_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__42_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__41_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__53_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__52_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__51_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "tn__50_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+
+        over "tn__500_Joint_" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "world"
+        {
+            over "base_link"
+            {
+                over "tn__13_Link_"
+                {
+                    over "tn__12_Link_"
+                    {
+                        over "tn__11_Link_"
+                        {
+                            over "tn__11_Link_"
+                            {
+                            }
+
+                            over "tn__11_Link_1_"
+                            {
+                            }
+                        }
+
+                        over "tn__12_Link_"
+                        {
+                        }
+
+                        over "tn__12_Link_1_"
+                        {
+                        }
+                    }
+
+                    over "tn__13_Link_"
+                    {
+                    }
+
+                    over "tn__13_Link_1_"
+                    {
+                    }
+                }
+
+                over "tn__23_Link_"
+                {
+                    over "tn__22_Link_"
+                    {
+                        over "tn__21_Link_"
+                        {
+                            over "tn__21_Link_"
+                            {
+                            }
+
+                            over "tn__21_Link_1_"
+                            {
+                            }
+                        }
+
+                        over "tn__22_Link_"
+                        {
+                        }
+
+                        over "tn__22_Link_1_"
+                        {
+                        }
+                    }
+
+                    over "tn__23_Link_"
+                    {
+                    }
+
+                    over "tn__23_Link_1_"
+                    {
+                    }
+                }
+
+                over "tn__33_Link_"
+                {
+                    over "tn__32_Link_"
+                    {
+                        over "tn__31_Link_"
+                        {
+                            over "tn__31_Link_"
+                            {
+                            }
+
+                            over "tn__31_Link_1_"
+                            {
+                            }
+                        }
+
+                        over "tn__32_Link_"
+                        {
+                        }
+
+                        over "tn__32_Link_1_"
+                        {
+                        }
+                    }
+
+                    over "tn__33_Link_"
+                    {
+                    }
+
+                    over "tn__33_Link_1_"
+                    {
+                    }
+                }
+
+                over "tn__43_Link_"
+                {
+                    over "tn__42_Link_"
+                    {
+                        over "tn__41_Link_"
+                        {
+                            over "tn__41_Link_"
+                            {
+                            }
+
+                            over "tn__41_Link_1_"
+                            {
+                            }
+                        }
+
+                        over "tn__42_Link_"
+                        {
+                        }
+
+                        over "tn__42_Link_1_"
+                        {
+                        }
+                    }
+
+                    over "tn__43_Link_"
+                    {
+                    }
+
+                    over "tn__43_Link_1_"
+                    {
+                    }
+                }
+
+                over "tn__53_Link_"
+                {
+                    over "tn__52_Link_"
+                    {
+                        over "tn__51_Link_"
+                        {
+                            over "tn__51_Link_"
+                            {
+                            }
+
+                            over "tn__51_Link_1_"
+                            {
+                            }
+                        }
+
+                        over "tn__50_Link_"
+                        {
+                            over "tn__50_Link_"
+                            {
+                            }
+
+                            over "tn__50_Link_1_"
+                            {
+                            }
+                        }
+
+                        over "tn__500_Link_"
+                        {
+                            over "tn__500_Link_"
+                            {
+                            }
+
+                            over "tn__500_Link_1_"
+                            {
+                            }
+                        }
+
+                        over "tn__52_Link_"
+                        {
+                        }
+
+                        over "tn__52_Link_1_"
+                        {
+                        }
+                    }
+
+                    over "tn__53_Link_"
+                    {
+                    }
+
+                    over "tn__53_Link_1_"
+                    {
+                    }
+                }
+
+                over "base_link"
+                {
+                }
+
+                over "base_link_1"
+                {
+                }
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

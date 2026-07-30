@@ -1,0 +1,52 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "mini2_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp1fcw11os/mini2_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mini2_description_kv41_r6w/usdex_mini2_description/mini2_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mini2_description_kv41_r6w/temp_mini2_description/mini2_description.usd
+
+
+Generated from Composed Stage of root layer /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/IsaacSim/Robots/mini2_description_1/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "mini2_description" (
+    prepend references = @./payloads/base.usda@
+    variants = {
+        string Physics = "physx"
+    }
+    append variantSets = "Physics"
+)
+{
+    variantSet "Physics" = {
+        "mujoco" (
+            prepend payload = @./payloads/Physics/mujoco.usda@
+        ) {
+
+        }
+        "none" {
+
+        }
+        "physics" (
+            prepend payload = @./payloads/Physics/physics.usda@
+        ) {
+
+        }
+        "physx" (
+            prepend payload = @./payloads/Physics/physx.usda@
+        ) {
+
+        }
+    }
+}
+

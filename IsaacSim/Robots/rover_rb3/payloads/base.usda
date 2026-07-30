@@ -1,0 +1,398 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "rover_rb3_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpeo_zqyvv/rover_rb3_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_qj84k70j/usdex_rover_rb3/rover_rb3_description.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_qj84k70j/temp_rover_rb3/rover_rb3.usd
+
+
+Generated from Composed Stage of root layer /home/johanna/Workspaces/msc_project_ws/RB3_ws/base/robot_ws/src/robot_description/urdf/rover_rb3_1/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./robot.usda@
+    ]
+    upAxis = "Z"
+)
+
+def Xform "rover_rb3_description" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        string name = "rover_rb3_description"
+    }
+    kind = "component"
+)
+{
+    float3[] extentsHint = [(-0.1, -0.07000015, 0.029999927), (0.1, 0.07000015, 0.2675), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.1, -0.08, 0.029999927), (0.1, 0.08, 0.2675)]
+
+    def Scope "Materials"
+    {
+        def Material "dark_grey" (
+            instanceable = true
+            prepend references = @./materials.usda@</Materials/dark_grey>
+        )
+        {
+        }
+
+        def Material "black" (
+            instanceable = true
+            prepend references = @./materials.usda@</Materials/black>
+        )
+        {
+        }
+
+        def Material "blue" (
+            instanceable = true
+            prepend references = @./materials.usda@</Materials/blue>
+        )
+        {
+        }
+
+        def Material "grey" (
+            instanceable = true
+            prepend references = @./materials.usda@</Materials/grey>
+        )
+        {
+        }
+
+        def Material "green" (
+            instanceable = true
+            prepend references = @./materials.usda@</Materials/green>
+        )
+        {
+        }
+    }
+
+    def Scope "Geometry"
+    {
+        def Xform "world"
+        {
+            def Xform "base_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0.1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Cube "box" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                    rel material:binding = </rover_rb3_description/Materials/dark_grey>
+                    double size = 1
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (0.17, 0.13, 0.055)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Cube "box_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                    displayName = "box"
+                )
+                {
+                    float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                    rel material:binding = </rover_rb3_description/Materials/dark_grey>
+                    double size = 1
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (0.12, 0.135, 0.11)
+                    double3 xformOp:translate = (0, 0, 0.0825)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "wheel_fl_link"
+                {
+                    quatf xformOp:orient = (0.70710546, 0.7071081, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.06, 0.05, -0.03)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Cylinder "cylinder" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.04, -0.04, -0.02), (0.04, 0.04, 0.02)]
+                        double height = 0.04
+                        rel material:binding = </rover_rb3_description/Materials/black>
+                        double radius = 0.04
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cylinder "cylinder_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        displayName = "cylinder"
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.04, -0.04, -0.02), (0.04, 0.04, 0.02)]
+                        double height = 0.04
+                        uniform token purpose = "guide"
+                        double radius = 0.04
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "wheel_fr_link"
+                {
+                    quatf xformOp:orient = (0.70710546, 0.7071081, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.06, -0.05, -0.03)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Cylinder "cylinder" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.04, -0.04, -0.02), (0.04, 0.04, 0.02)]
+                        double height = 0.04
+                        rel material:binding = </rover_rb3_description/Materials/black>
+                        double radius = 0.04
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cylinder "cylinder_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        displayName = "cylinder"
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.04, -0.04, -0.02), (0.04, 0.04, 0.02)]
+                        double height = 0.04
+                        uniform token purpose = "guide"
+                        double radius = 0.04
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "wheel_rl_link"
+                {
+                    quatf xformOp:orient = (0.70710546, 0.7071081, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-0.06, 0.05, -0.03)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Cylinder "cylinder" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.04, -0.04, -0.02), (0.04, 0.04, 0.02)]
+                        double height = 0.04
+                        rel material:binding = </rover_rb3_description/Materials/black>
+                        double radius = 0.04
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cylinder "cylinder_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        displayName = "cylinder"
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.04, -0.04, -0.02), (0.04, 0.04, 0.02)]
+                        double height = 0.04
+                        uniform token purpose = "guide"
+                        double radius = 0.04
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "wheel_rr_link"
+                {
+                    quatf xformOp:orient = (0.70710546, 0.7071081, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-0.06, -0.05, -0.03)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Cylinder "cylinder" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.04, -0.04, -0.02), (0.04, 0.04, 0.02)]
+                        double height = 0.04
+                        rel material:binding = </rover_rb3_description/Materials/black>
+                        double radius = 0.04
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cylinder "cylinder_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        displayName = "cylinder"
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.04, -0.04, -0.02), (0.04, 0.04, 0.02)]
+                        double height = 0.04
+                        uniform token purpose = "guide"
+                        double radius = 0.04
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "camera_link"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.065, 0.035, 0.1475)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Cube "box" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                        rel material:binding = </rover_rb3_description/Materials/blue>
+                        double size = 1
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (0.02, 0.02, 0.02)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "box_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        displayName = "box"
+                    )
+                    {
+                        float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                        uniform token purpose = "guide"
+                        double size = 1
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (0.02, 0.02, 0.02)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "lidar_link"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0.1475)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Cylinder "cylinder" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.025, -0.025, -0.02), (0.025, 0.025, 0.02)]
+                        double height = 0.04
+                        rel material:binding = </rover_rb3_description/Materials/grey>
+                        double radius = 0.025
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cylinder "cylinder_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        displayName = "cylinder"
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.025, -0.025, -0.02), (0.025, 0.025, 0.02)]
+                        double height = 0.04
+                        uniform token purpose = "guide"
+                        double radius = 0.025
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "imu_link"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.05, 0, 0.1)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Cube "box" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                        rel material:binding = </rover_rb3_description/Materials/green>
+                        double size = 1
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (0.03, 0.02, 0.01)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "box_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        displayName = "box"
+                    )
+                    {
+                        float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                        uniform token purpose = "guide"
+                        double size = 1
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (0.03, 0.02, 0.01)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Cube "box_2" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI"]
+                    displayName = "box"
+                )
+                {
+                    float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                    uniform token purpose = "guide"
+                    double size = 1
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (0.17, 0.16, 0.14)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+        }
+    }
+
+    def Scope "Physics"
+    {
+    }
+}
+
