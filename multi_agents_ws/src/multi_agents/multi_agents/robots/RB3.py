@@ -104,7 +104,7 @@ class RB3(Robot):
             if not self._init:
                 pose = Pose()
                 pose.position.x = translation.x
-                pose.position.y = translation.y
+                pose.position.y = translation.y 
                 pose.position.z = translation.z
 
                 pose.orientation.x = rotation.x

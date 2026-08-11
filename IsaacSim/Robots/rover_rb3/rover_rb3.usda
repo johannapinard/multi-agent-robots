@@ -7,8 +7,8 @@
                 double radius = 5
             }
             dictionary Perspective = {
-                double3 position = (5, 5, 5)
-                double3 target = (-3.978038431995401e-8, -3.978038254359717e-8, 7.956076863990802e-8)
+                double3 position = (0.003472931527999675, 1.0173512184345028, 0.4170881230746006)
+                double3 target = (0.09504515211773094, -0.5204316833657161, 0.240928658309492)
             }
             dictionary Right = {
                 double3 position = (0, -5, 0)
@@ -52,6 +52,123 @@ def Xform "rover_rb3_description" (
     append variantSets = "Physics"
 )
 {
+    over "Geometry"
+    {
+        over "world"
+        {
+            over "base_link"
+            {
+                over "wheel_rl_link"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+                    double3 xformOp:translate = (-0.047, 0.0625, -0.02)
+
+                    over "cylinder"
+                    {
+                        float3 xformOp:scale = (0.95, 0.95, 1)
+                    }
+
+                    over "cylinder_1"
+                    {
+                        float3 xformOp:scale = (0.95, 0.95, 1)
+                    }
+                }
+
+                over "wheel_fl_link"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+                    double3 xformOp:translate = (0.047, 0.0625, -0.02)
+
+                    over "cylinder"
+                    {
+                        float3 xformOp:scale = (0.95, 0.95, 1)
+                    }
+
+                    over "cylinder_1"
+                    {
+                        float3 xformOp:scale = (0.95, 0.95, 1)
+                    }
+                }
+
+                over "wheel_fr_link"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+                    double3 xformOp:translate = (0.047, -0.0625, -0.02)
+
+                    over "cylinder"
+                    {
+                        float3 xformOp:scale = (0.95, 0.95, 1)
+                    }
+
+                    over "cylinder_1"
+                    {
+                        float3 xformOp:scale = (0.95, 0.95, 1)
+                    }
+                }
+
+                over "wheel_rr_link"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+                    double3 xformOp:translate = (-0.047, -0.0625, -0.02)
+
+                    over "cylinder"
+                    {
+                        float3 xformOp:scale = (0.95, 0.95, 1)
+                    }
+
+                    over "cylinder_1"
+                    {
+                        float3 xformOp:scale = (0.95, 0.95, 1)
+                    }
+                }
+
+                over "box"
+                {
+                    float3 xformOp:scale = (0.175, 0.135, 0.05)
+                }
+
+                over "box_1"
+                {
+                    float3 xformOp:scale = (0.135, 0.12, 0.111)
+                    double3 xformOp:translate = (0, 0, 0.08)
+                }
+
+                over "camera_link"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+                    double3 xformOp:translate = (0.065, 0.035, 0.1575)
+                }
+
+                over "lidar_link"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0.14)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "imu_link"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+                }
+            }
+        }
+    }
     variantSet "Physics" = {
         "mujoco" (
             prepend payload = @./payloads/Physics/mujoco.usda@
@@ -378,10 +495,10 @@ over "OmniverseKit_Persp" (
     float exposure:time = 0.02
     float focalLength = 18.147562
     float focusDistance = 400
-    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -8.660254037844386)
-    float3 xformOp:rotateXYZ = (54.73561, -6.3611094e-15, 135)
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -1.5505463171666836)
+    float3 xformOp:rotateXYZ = (83.47647, -1.5505204e-13, -176.59216)
     float3 xformOp:scale = (1, 1, 1)
-    double3 xformOp:translate = (5, 5, 5)
+    double3 xformOp:translate = (0.003472931527999675, 1.0173512184345028, 0.4170881230746006)
     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
 }
 

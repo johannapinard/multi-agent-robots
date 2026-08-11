@@ -72,7 +72,7 @@ async def main():
     print("rover init")
     global robot, rover_rb3_controller
 
-    stage = omni.usd.get_context().get_stage()
+    omni.usd.get_context().get_stage()
 
     world = World()
     await world.initialize_simulation_context_async()
