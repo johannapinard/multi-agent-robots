@@ -4,13 +4,13 @@
         string creator = "URDF USD Converter v0.1.2"
     }
     defaultPrim = "rover_rb3_description"
-    doc = """Generated from Composed Stage of root layer /tmp/tmpeo_zqyvv/rover_rb3_description.usdc
+    doc = """Generated from Composed Stage of root layer /tmp/tmpewd1qrdp/rover_rb3_description.usdc
 
 
-Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_qj84k70j/usdex_rover_rb3/rover_rb3_description.usdc
+Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_33r_6a71/usdex_rover_rb3/rover_rb3_description.usdc
 
 
-Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_qj84k70j/temp_rover_rb3/rover_rb3.usd
+Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_33r_6a71/temp_rover_rb3/rover_rb3.usd
 """
     kilogramsPerUnit = 1
     metersPerUnit = 1
@@ -22,6 +22,7 @@ over "rover_rb3_description" (
 )
 {
     prepend rel isaac:physics:robotJoints = [
+        </rover_rb3_description/Physics/world_fixed>,
         </rover_rb3_description/Physics/wheel_fl_joint>,
         </rover_rb3_description/Physics/wheel_fr_joint>,
         </rover_rb3_description/Physics/wheel_rl_joint>,
@@ -40,7 +41,7 @@ over "rover_rb3_description" (
         </rover_rb3_description/Geometry/world/base_link/lidar_link>,
         </rover_rb3_description/Geometry/world/base_link/imu_link>,
     ]
-    token isaac:robotType = "Wheeled"
+    token isaac:robotType = "Default"
 
     over "Geometry"
     {
@@ -97,6 +98,12 @@ over "rover_rb3_description" (
 
     over "Physics"
     {
+        over "world_fixed" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
         over "wheel_fl_joint" (
             prepend apiSchemas = ["IsaacJointAPI"]
         )

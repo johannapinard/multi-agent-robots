@@ -4,16 +4,16 @@
         string creator = "URDF USD Converter v0.1.2"
     }
     defaultPrim = "rover_rb3_description"
-    doc = """Generated from Composed Stage of root layer /tmp/tmpeo_zqyvv/rover_rb3_description.usdc
+    doc = """Generated from Composed Stage of root layer /tmp/tmpewd1qrdp/rover_rb3_description.usdc
 
 
-Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_qj84k70j/usdex_rover_rb3/rover_rb3_description.usdc
+Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_33r_6a71/usdex_rover_rb3/rover_rb3_description.usdc
 
 
-Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_qj84k70j/temp_rover_rb3/rover_rb3.usd
+Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_33r_6a71/temp_rover_rb3/rover_rb3.usd
 
 
-Generated from Composed Stage of root layer /home/johanna/Workspaces/msc_project_ws/RB3_ws/base/robot_ws/src/robot_description/urdf/rover_rb3_1/payloads/base.usd
+Generated from Composed Stage of root layer /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/IsaacSim/Robots/rover_rb3_1/payloads/base.usd
 """
     kilogramsPerUnit = 1
     metersPerUnit = 1
@@ -30,7 +30,7 @@ over "rover_rb3_description"
                 prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsArticulationRootAPI", "NewtonArticulationRootAPI", "PhysicsMassAPI"]
             )
             {
-                bool newton:selfCollisionEnabled = 1
+                bool newton:selfCollisionEnabled = 0
                 float3 physics:diagonalInertia = (0.04, 0.04, 0.06)
                 float physics:mass = 5
                 quatf physics:principalAxes = (1, 0, 0, 0)
@@ -139,8 +139,11 @@ over "rover_rb3_description"
 
     over "Physics"
     {
-        def PhysicsFixedJoint "wheel_fl_joint"
+        def PhysicsRevoluteJoint "wheel_fl_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
         {
+            uniform token physics:axis = "X"
             custom rel physics:body0
             prepend rel physics:body0 = </rover_rb3_description/Geometry/world/base_link>
             custom rel physics:body1
@@ -151,8 +154,11 @@ over "rover_rb3_description"
             quatf physics:localRot1 = (1, 0, 0, 0)
         }
 
-        def PhysicsFixedJoint "wheel_fr_joint"
+        def PhysicsRevoluteJoint "wheel_fr_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
         {
+            uniform token physics:axis = "X"
             custom rel physics:body0
             prepend rel physics:body0 = </rover_rb3_description/Geometry/world/base_link>
             custom rel physics:body1
@@ -163,8 +169,11 @@ over "rover_rb3_description"
             quatf physics:localRot1 = (1, 0, 0, 0)
         }
 
-        def PhysicsFixedJoint "wheel_rl_joint"
+        def PhysicsRevoluteJoint "wheel_rl_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
         {
+            uniform token physics:axis = "X"
             custom rel physics:body0
             prepend rel physics:body0 = </rover_rb3_description/Geometry/world/base_link>
             custom rel physics:body1
@@ -175,8 +184,11 @@ over "rover_rb3_description"
             quatf physics:localRot1 = (1, 0, 0, 0)
         }
 
-        def PhysicsFixedJoint "wheel_rr_joint"
+        def PhysicsRevoluteJoint "wheel_rr_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
         {
+            uniform token physics:axis = "X"
             custom rel physics:body0
             prepend rel physics:body0 = </rover_rb3_description/Geometry/world/base_link>
             custom rel physics:body1
@@ -184,6 +196,18 @@ over "rover_rb3_description"
             point3f physics:localPos0 = (-0.06, -0.05, -0.03)
             point3f physics:localPos1 = (0, 0, 0)
             quatf physics:localRot0 = (0.70710546, 0.7071081, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "world_fixed"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </rover_rb3_description>
+            custom rel physics:body1
+            prepend rel physics:body1 = </rover_rb3_description/Geometry/world/base_link>
+            point3f physics:localPos0 = (0, 0, 0.1)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
             quatf physics:localRot1 = (1, 0, 0, 0)
         }
 

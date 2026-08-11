@@ -428,7 +428,7 @@ class BezierGait():
             stored_phase = phase
         # Just for keeping track
         self.Phases[index] = stored_phase
-        print("LEG: {} \t PHASE: {}".format(index, stored_phase))
+        # print("LEG: {} \t PHASE: {}".format(index, stored_phase))
         if StanceSwing == STANCE:
             return self.StanceStep(phase, L, LateralFraction, YawRate,
                                    penetration_depth, T_bf, key, index)

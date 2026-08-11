@@ -4,14 +4,12 @@
 # simulation_app = SimulationApp({"headless": False})
 
 from isaacsim.core.api.world import World
-from isaacsim.core.prims import SingleArticulation, XFormPrim # GameObject
-from isaacsim.core.utils.stage import add_reference_to_stage
+from isaacsim.core.prims import SingleArticulation
 from isaacsim.core.utils.types import ArticulationAction
-from pxr import UsdGeom, Usd, UsdPhysics
+from pxr import UsdGeom
 import omni
-import carb
 import omni.appwindow
-import copy
+import carb
 from quadruped_gait_generator import BezierGait
 from quadruped_kinematics import XGOModel
 import numpy as np
@@ -105,26 +103,6 @@ def update(dt):
         joint_cmd[12] = angles[3, 2] - BR_offset[2]
         joint_cmd[13] = angles[2, 2] - BL_offset[2]
 
-        # # First leg joint layer
-        # joint_cmd[0] = 0
-        # joint_cmd[1] = 0
-        # joint_cmd[2] = 0
-        # joint_cmd[3] = 0
-        # # Second leg joint layer
-        # joint_cmd[5] = 0
-        # joint_cmd[6] = 0
-        # joint_cmd[7] = 0
-        # joint_cmd[8] = 0
-        # # Third leg joint layer
-        # joint_cmd[10] = 0
-        # joint_cmd[11] = 0
-        # joint_cmd[12] = 0
-        # joint_cmd[13] = 0
-
-        print(joint_cmd)
-
-        # robot.set_joint_positions(joint_cmd)
-
         robot.apply_action(
             ArticulationAction(joint_positions=joint_cmd)
         )
@@ -208,7 +186,7 @@ async def main():
     keyboard_callback
     )
 
-    # register physics loop callback -> app not running
+    # register physics loop callback -> app running
     world.add_physics_callback("gait", update)
 
 asyncio.ensure_future(main())

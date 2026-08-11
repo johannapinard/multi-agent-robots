@@ -1,13 +1,14 @@
 import rclpy
 import cv2
 import numpy as np
-from geometry_msgs.msg import Twist, Pose
+from geometry_msgs.msg import Twist, Pose, PoseWithCovarianceStamped
 from visualization_msgs.msg import Marker
 from sensor_msgs.msg import Image
+from tf2_ros import Buffer, TransformListener
 from multi_agents.robots.Robot import Robot
-import time
 
 
+RB3_TAG_ID = 'tag36h11:0'
 RED_MASK = [[(170,70,50), (180,255,255)], [(0,120,120), (10,255,255)]]
 # BLUE_MASK = [(90,120,120), (115,255,255)]
 BLUE_MASK = [(170, 70, 50), (180, 255, 255)]
@@ -33,11 +34,20 @@ class RB3(Robot):
         self.colors_dict = {"red": RED_MASK, "blue": BLUE_MASK}
         self._last_frame = None
 
+        self._tf_buffer = Buffer()
+        self._tf_listener = TransformListener(self._tf_buffer, self)
+
+        self.timer = self.create_timer(0.1, self._tf_callback)
+
         self._image_subscriber = self.create_subscription(Image, '/image_wrapped', self._camera_callback, 10)
 
         # check with nav2
         self._object_publisher = self.create_publisher(Marker, '/multi_agents/objects', 10)
         self._twist_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
+        self._inital_pose_publisher = self.create_publisher(PoseWithCovarianceStamped, '/initialpose', 10) # for AMCL localization
+
+        self._current_pose_in_workspace = [0, 0, 0, 0, 0, 0, 0]
+        self._init = False
 
         # msg OK
         # self.request_timer = self.create_timer(
@@ -52,15 +62,15 @@ class RB3(Robot):
         # timer_period = 0.01  # seconds
         # self.timer = self.create_timer(timer_period, self._move)
 
-        timer_period = 5  # seconds
-        self.timer = self.create_timer(timer_period, self.test)
+        # timer_period = 15  # seconds
+        # self.timer = self.create_timer(timer_period, self.test)
 
         # self._load_map() # TODO
 
     def test(self):
-        img = self._set_mask(self._last_frame, self.colors_dict['blue'])
+        # img = self._set_mask(self._last_frame, self.colors_dict['blue'])
         self.get_logger().info(f'{self.colors_dict['blue']}')
-        cv2.imshow('Image', img)
+        cv2.imshow('Image', self._last_frame)
         cv2.waitKey()
 
     def _camera_callback(self, msg):
@@ -83,6 +93,53 @@ class RB3(Robot):
 
         # NV12 -> RGB conversion (OpenCV)
         self._last_frame = cv2.cvtColor(yuv, cv2.COLOR_YUV2RGB_NV12)
+
+    def _tf_callback(self):
+        try:
+            tf = self._tf_buffer.lookup_transform('map', RB3_TAG_ID, rclpy.time.Time())
+
+            translation = tf.transform.translation
+            rotation = tf.transform.rotation
+
+            if not self._init:
+                pose = Pose()
+                pose.position.x = translation.x
+                pose.position.y = translation.y
+                pose.position.z = translation.z
+
+                pose.orientation.x = rotation.x
+                pose.orientation.y = rotation.y
+                pose.orientation.z = rotation.z
+                pose.orientation.w = rotation.w
+
+                msg = PoseWithCovarianceStamped()
+                msg.header.frame_id = 'map'
+                msg.header.stamp = self.get_clock().now().to_msg()
+                msg.pose.pose = pose
+                msg.pose.covariance = [
+                    0.0025, 0,      0,      0,     0,     0,
+                    0,      0.0025, 0,      0,     0,     0,
+                    0,      0,      0.0025, 0,     0,     0,
+                    0,      0,      0,      0,     0,     0,
+                    0,      0,      0,      0,     0,     0,
+                    0,      0,      0,      0,     0,     0,
+                    0,      0,      0,      0,     0,     0.0076,
+                ] # estimates 5 cm and 5° of pose difference
+
+                self._inital_pose_publisher.publish(msg)
+
+                self._init = True
+
+            self._current_pose_in_workspace[0] = translation.x
+            self._current_pose_in_workspace[1] = translation.y
+            self._current_pose_in_workspace[2] = translation.z
+            self._current_pose_in_workspace[3] = rotation.x
+            self._current_pose_in_workspace[4] = rotation.y
+            self._current_pose_in_workspace[5] = rotation.z
+            self._current_pose_in_workspace[6] = rotation.w
+
+        except Exception as e:
+            self.get_logger().warn(f'Could not get map to RB3 tf: {e}')
 
     def _set_mask(self, src, color):
 

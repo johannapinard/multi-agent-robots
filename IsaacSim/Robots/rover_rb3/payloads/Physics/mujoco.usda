@@ -3,24 +3,103 @@
     customLayerData = {
         string creator = "URDF USD Converter v0.1.2"
     }
-    doc = """Generated from Composed Stage of root layer /tmp/tmpeo_zqyvv/rover_rb3_description.usdc
+    defaultPrim = "rover_rb3_description"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpewd1qrdp/rover_rb3_description.usdc
 
 
-Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_qj84k70j/usdex_rover_rb3/rover_rb3_description.usdc
+Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_33r_6a71/usdex_rover_rb3/rover_rb3_description.usdc
 
 
-Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_qj84k70j/temp_rover_rb3/rover_rb3.usd
+Generated from Composed Stage of root layer /tmp/urdf_import_rover_rb3_33r_6a71/temp_rover_rb3/rover_rb3.usd
 
 
-Generated from Composed Stage of root layer /home/johanna/Workspaces/msc_project_ws/RB3_ws/base/robot_ws/src/robot_description/urdf/rover_rb3_1/payloads/base.usd
+Generated from Composed Stage of root layer /home/johanna/Workspaces/msc_project_ws/multi-agent-robots/IsaacSim/Robots/rover_rb3_1/payloads/base.usd
 """
     kilogramsPerUnit = 1
     metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
     upAxis = "Z"
 )
 
 over "rover_rb3_description"
 {
+    over "Physics"
+    {
+        def MjcActuator "wheel_fl_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </rover_rb3_description/Physics/wheel_fl_joint>
+        }
+
+        def MjcActuator "wheel_fr_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </rover_rb3_description/Physics/wheel_fr_joint>
+        }
+
+        def MjcActuator "wheel_rl_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </rover_rb3_description/Physics/wheel_rl_joint>
+        }
+
+        def MjcActuator "wheel_rr_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </rover_rb3_description/Physics/wheel_rr_joint>
+        }
+
+        over "world_fixed"
+        {
+        }
+
+        over "wheel_fl_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wheel_fr_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wheel_rl_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wheel_rr_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "camera_joint"
+        {
+        }
+
+        over "lidar_joint"
+        {
+        }
+
+        over "imu_joint"
+        {
+        }
+    }
+
     over "Geometry"
     {
         over "world"
@@ -117,10 +196,6 @@ over "rover_rb3_description"
                 }
             }
         }
-    }
-
-    over "Physics"
-    {
     }
 
     over "Materials"
