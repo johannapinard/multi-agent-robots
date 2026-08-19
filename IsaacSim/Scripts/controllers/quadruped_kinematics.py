@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 import numpy as np
-from quadruped_leg_kinematics import LegIK
-from LieAlgebra import RpToTrans, TransToRp, TransInv, RPY
+from IsaacSim.Scripts.controllers.quadruped_leg_kinematics import LegIK
+from IsaacSim.Scripts.controllers.LieAlgebra import RpToTrans, TransToRp, TransInv, RPY
 from collections import OrderedDict
 
 

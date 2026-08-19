@@ -2,7 +2,7 @@
 
 import numpy as np
 import math
-from LieAlgebra import TransToRp
+from IsaacSim.Scripts.controllers.LieAlgebra import TransToRp
 import copy
 
 STANCE = 0

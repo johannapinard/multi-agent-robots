@@ -10,8 +10,8 @@ from pxr import UsdGeom
 import omni
 import omni.appwindow
 import carb
-from quadruped_gait_generator import BezierGait
-from quadruped_kinematics import XGOModel
+from IsaacSim.Scripts.controllers.quadruped_gait_generator import BezierGait
+from IsaacSim.Scripts.controllers.quadruped_kinematics import XGOModel
 import numpy as np
 import asyncio
 
