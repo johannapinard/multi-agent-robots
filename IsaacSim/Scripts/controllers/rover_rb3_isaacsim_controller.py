@@ -80,7 +80,7 @@ async def main():
     await world.initialize_simulation_context_async()
 
     robot = WheeledRobot(
-        paths="/Environment/_ROBOTS_/rover_rb3",
+        paths="/World/_ROBOTS_/rover_rb3",
         wheel_dof_names=["wheel_fl_joint", "wheel_fr_joint", "wheel_rl_joint", "wheel_rr_joint"],
         usd_path="/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/IsaacSim/Robots/rover_rb3/rover_rb3.usda"
     )

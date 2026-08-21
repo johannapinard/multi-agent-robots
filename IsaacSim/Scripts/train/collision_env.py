@@ -1,23 +1,22 @@
-from __future__ import annotations 
-
-import argparse
-from isaaclab.app import AppLauncher
-
-parser = argparse.ArgumentParser(description="Collision Avoidance Environment")
-AppLauncher.add_app_launcher_args(parser)
-args_cli = parser.parse_args()
-
-app_launcher = AppLauncher(args_cli)
-simulation_app = app_launcher.app
-
-
-
 # from __future__ import annotations 
 
-# import isaacsim 
-# from isaacsim import SimulationApp 
+# import argparse
+# from isaaclab.app import AppLauncher
 
-# simulation_app = SimulationApp({"headless": True})
+# parser = argparse.ArgumentParser(description="Collision Avoidance Environment")
+# AppLauncher.add_app_launcher_args(parser)
+# args_cli = parser.parse_args()
+
+# app_launcher = AppLauncher(args_cli)
+# simulation_app = app_launcher.app
+
+
+from __future__ import annotations 
+
+import isaacsim 
+from isaacsim import SimulationApp 
+
+simulation_app = SimulationApp({"headless": False})
 
 # from isaacsim.robot.experimental.wheeled_robots.controllers import DifferentialController
 import omni.physics.tensors
@@ -43,21 +42,8 @@ from pxr import UsdGeom, Usd, PhysxSchema, UsdPhysics, Gf
 import carb
 from omni.physx.scripts import physicsUtils
 import time
-# from gymnasium.wrappers import RecordVideo
 import gymnasium as gym
 
-
-print("========== VERSIONS ==========")
-print("isaaclab:", getattr(isaaclab, "__version__", "unknown"))
-print("isaaclab_physx:", getattr(isaaclab_physx, "__version__", "unknown"))
-print("warp:", wp.__version__)
-print("warp location:", wp.__file__)
-print("==============================")
-
-print("torch:", torch.__version__)
-print("torch cuda:", torch.version.cuda)
-print("cuda available:", torch.cuda.is_available())
-print("cuda device:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "NO CUDA")
 
 WALL_MARGIN = 0.20
 ROVER_PATH = "_ROBOTS_/rover_rb3/Geometry/world/base_link"
@@ -85,41 +71,7 @@ class CollisionEnvSceneCfg(InteractiveSceneCfg):
         },
     )
 
-    # # add a contact force on the robot that will detect collisions with the maze borders (the output of the sensor will not be passed to the rl policy)
-    # contact_forces: ContactSensorCfg = ContactSensorCfg(
-    #     prim_path="{ENV_REGEX_NS}/scene/" + ROVER_PATH,
-    #     update_period=0.0,
-    #     history_length=6,
-    #     debug_vis=True,
-    #     filter_prim_paths_expr=[
-    #         "{ENV_REGEX_NS}/scene/_MAZE_"
-    #     ],
-    # )
-
     maze: AssetBaseCfg = AssetBaseCfg(prim_path="{ENV_REGEX_NS}/scene/_MAZE_")
-
-    # lidar = RayCasterCfg(
-    #     prim_path = "{ENV_REGEX_NS}/scene/" + ROVER_PATH,
-
-    #     mesh_prim_paths=["/World/envs/env_0/scene/_MAZE_"],
-
-    #     update_period=0.0,
-
-    #     offset=RayCasterCfg.OffsetCfg(
-    #         pos=(0.0, 0.0, 0.21),
-    #     ),
-
-    #     pattern_cfg = patterns.LidarPatternCfg(
-    #         channels=16,
-    #         vertical_fov_range=(0.0, 0.0),
-    #         horizontal_fov_range=(-180.0, 180.0),
-    #         horizontal_res=22.5,
-    #     ),
-
-    #     max_distance=10.0,
-
-    #     debug_vis=True,
-    # )
 
 # -----------------------------------------------------------------------------
 # Environment Configuration
@@ -144,7 +96,7 @@ class CollisionEnvRB3Cfg(DirectRLEnvCfg):
 
     scene: CollisionEnvSceneCfg = CollisionEnvSceneCfg(
         num_envs=4,
-        env_spacing=4.0,
+        env_spacing=12.0,
         replicate_physics=True,
         clone_in_fabric=True,
     )
@@ -184,12 +136,6 @@ class CollisionAvoidanceEnv(DirectRLEnv):
 
         self.spawn_points = torch.stack(self._get_spawn_points()).to(self.device)
         print(f"spawned: {self.spawn_points[0]}")
-
-        # stage = omni.usd.get_context().get_stage()
-        # rb3_prim = stage.GetPrimAtPath("/World/envs/env_0/scene/_ROBOTS_/rover_rb3/Geometry/world/base_link")
-        # PhysxSchema.PhysxContactReportAPI.Apply(rb3_prim)
-
-        # self.action_scale = self.cfg.action_scale
 
         print("========== AFTER CLONING ==========")
 
@@ -290,38 +236,6 @@ class CollisionAvoidanceEnv(DirectRLEnv):
 
         return spawn_points
 
-    # def render(self):
-    #     print("Render mode:", self.render_mode)
-
-    #     viewport = omni.kit.viewport.utility.get_active_viewport()
-
-    #     viewport.set_active_camera(self.camera_path)
-
-    #     # Let Isaac Sim render the current frame.
-    #     self.sim.render()
-
-    #     # Isaac Lab's DirectRLEnv rendering
-    #     frame = super().render()
-
-    #     if frame is not None:
-    #         print(
-    #             "Frame:",
-    #             type(frame),
-    #             "shape:",
-    #             frame.shape,
-    #             "dtype:",
-    #             frame.dtype,
-    #             "min:",
-    #             frame.min(),
-    #             "max:",
-    #             frame.max(),
-    #             "mean:",
-    #             frame.mean(),
-    #         )
-    #     else:
-    #         print("Frame: None")
-
-    #     return frame
 
     # -------------------------------------------------------------------------
     # Scene setup
@@ -344,50 +258,18 @@ class CollisionAvoidanceEnv(DirectRLEnv):
                 prim_path,
                 usd_cfg.spawn,
                 translation=(0.0, 0.0, 0.0),
-                orientation=(1.0, 0.0, 0.0, 0.0),
+                orientation=(0.0, 0.0, 0.0, 1.0),
             )
 
         stage = omni.usd.get_context().get_stage()
 
-        camera_cfg = CameraCfg(
-            prim_path="/World/RecordingCamera",
-            update_period=0.0,
-            height=240,
-            width=320,
-            data_types=["rgb"],
-            spawn=sim_utils.PinholeCameraCfg(
-                focal_length=35.0,
-                horizontal_aperture=36.0,
-            )
-        )
+        xgo_prim_path = f"{prim_path}/_ROBOTS_/xgo_lite"
 
-        self.camera = Camera(camera_cfg)
+        xgo_prim = stage.GetPrimAtPath(xgo_prim_path)
 
-        print(">>> Recording camera created")
-        print("    prim_path:", self.camera.cfg.prim_path)
-
-        # camera_cfg = CameraCfg(
-        #     prim_path="/World/RecordingCamera",
-        #     update_period=0.0,
-        #     height=480,
-        #     width=640,
-        #     data_types=["rgb"],
-        #     spawn=sim_utils.PinholeCameraCfg(
-        #         focal_length=35.0,
-        #         horizontal_aperture=36.0,
-        #     ),
-        #     offset=CameraCfg.OffsetCfg(
-        #         pos=(2.0, 2.0, 15.0),
-        #         rot=(0.0, 0.0, 0.0, 1.0),
-        #         convention="world",
-        #     ),
-        # )
-
-        # self.camera = Camera(camera_cfg)
-        # self.scene.sensors["recording_camera"] = self.camera
-
-        print(">>> Recording camera created")
-        print("    prim_path:", self.camera.cfg.prim_path)
+        if xgo_prim.IsValid():
+            xgo_prim.SetActive(False)
+            print(f"[INFO] Disabled XGO: {xgo_prim_path}")
 
         source_robot_path = f"{prim_path}/{ROVER_PATH}"
         robot_prim = stage.GetPrimAtPath(source_robot_path)
@@ -460,6 +342,8 @@ class CollisionAvoidanceEnv(DirectRLEnv):
 
         linear_speed = self.actions[:, 0]
         angular_speed = self.actions[:, 1]
+
+        print(self.actions)
 
         left_velocity = (linear_speed - angular_speed * self.wheel_base / 2.0)
         right_velocity = (linear_speed + angular_speed * self.wheel_base / 2.0)
@@ -644,20 +528,6 @@ class CollisionAvoidanceEnv(DirectRLEnv):
         root_pose[:, 4] = 0.0                   # X
         root_pose[:, 5] = 0.0                   # Y
         root_pose[:, 6] = torch.sin(yaw / 2.0)  # Z
-        
-        # default_root_pose = torch.as_tensor(self.rover_rb3.data.default_root_pose,device=self.device)[env_ids].clone()
-        # default_root_pose[:, :2] = next_spawn_positions
-        # default_root_vel = torch.as_tensor(self.rover_rb3.data.default_root_vel,device=self.device)[env_ids].clone()
-
-        # # random orientation
-
-        # # XYZW
-        # default_root_pose[:, 3] = 0.0
-        # default_root_pose[:, 4] = 0.0
-        # default_root_pose[:, 5] = torch.sin(yaw / 2.0)
-        # default_root_pose[:, 6] = torch.cos(yaw / 2.0)
-
-        # default_root_vel.zero_()
 
         root_vel = torch.zeros((len(env_ids), 6), device=self.device, dtype=torch.float32)
 
@@ -677,27 +547,6 @@ class CollisionAvoidanceEnv(DirectRLEnv):
 
         self.previous_distance[env_ids] = torch.linalg.vector_norm(self.goal_pos[env_ids] - next_spawn_positions[:, :2], dim=-1)
 
-        # self.rover_rb3.write_root_link_pose_to_sim_index(
-        #     root_pose=default_root_pose,
-        #     env_ids=env_ids,
-        # )
-
-        # self.rover_rb3.write_root_com_velocity_to_sim_index(
-        #     root_velocity=default_root_vel,
-        #     env_ids=env_ids,
-        # )
-
-        # rand_x = (torch.rand(len(env_ids), device=self.device) * (4.0 - 2.0 * WALL_MARGIN) + WALL_MARGIN) + self.scene.env_origins[env_ids, :2]
-        # rand_y = (torch.rand(len(env_ids), device=self.device) * (4.0 - 2.0 * WALL_MARGIN) + WALL_MARGIN) + self.scene.env_origins[env_ids, :2]
-
-
-        # self.goal_pos[env_ids, 0] = (self.scene.env_origins[env_ids, 0] + rand_x)
-
-        # self.goal_pos[env_ids, 1] = (self.scene.env_origins[env_ids, 1] + rand_y)
-
-        # robot_pos = wp.to_torch(self.rover_rb3.data.root_pos_w)[env_ids, :2]
-        # self.previous_distance[env_ids] = torch.linalg.vector_norm(self.goal_pos[env_ids] - robot_pos, dim=-1)
-
         self.collisions_array[env_ids] = False
         self.is_too_close[env_ids] = False
         # self.robot_collision[env_ids] = False
@@ -711,7 +560,7 @@ if __name__ == "__main__":
 
     base_env = CollisionAvoidanceEnv(
         cfg=env_cfg,
-        render_mode="rgb_array", # for videos
+        render_mode=None, # for videos
     )
 
     print("Environment created.")
@@ -721,64 +570,6 @@ if __name__ == "__main__":
     obs, info = base_env.reset()
     
     print("AFTER RESET")
-
-    import imageio
-
-    video_path = "/home/johanna/Videos/training/collision_env.mp4"
-
-    writer = imageio.get_writer(
-        video_path,
-        fps=30,
-        codec="libx264",
-    )
-
-    print("Starting video:", video_path)
-
-    print("Scene sensors:")
-    print(base_env.scene.sensors.keys())
-
-    print("Camera output keys:")
-    print(base_env.camera.data.output.keys())
-
-    print("BEFORE CAMERA UPDATE")
-
-    base_env.sim.render()
-    base_env.camera.update(0.0)
-
-    print("AFTER SIM RENDER")
-
-    rgb = base_env.camera.data.output["rgb"]
-
-    frame = rgb[0].detach().cpu().numpy()
-
-    print(
-        "FRAME:",
-        frame.shape,
-        frame.dtype,
-        frame.min(),
-        frame.max(),
-        frame.mean(),
-        flush=True,
-    )
-
-    # Take the first environment
-    frame = rgb[0]
-
-    if torch.is_tensor(frame):
-        frame = frame.detach().cpu().numpy()
-
-    # Remove alpha if present
-    if frame.shape[-1] > 3:
-        frame = frame[..., :3]
-
-    frame = rgb[0].detach().cpu().numpy()
-
-    imageio.imwrite(
-        "/home/johanna/Videos/training/test_camera.png",
-        frame,
-    )
-
-    print("Test frame saved.")
 
     num_steps = 100 # 50 000
 
@@ -798,33 +589,16 @@ if __name__ == "__main__":
 
         obs, rewards, terminated, truncated, info = (base_env.step(actions))
 
-        writer.append_data(frame)
-
-        if step % 10 == 0:
-            # Camera sensor is updated by the scene.
-            rgb = base_env.camera.data.output["rgb"]
-
-            # Record first environment only.
-            frame = rgb[0]
-
-            if torch.is_tensor(frame):
-                frame = frame.detach().cpu().numpy()
-
-            frame = frame[..., :3]
-
-            writer.append_data(frame)
+        simulation_app.update()
 
         steps_done +=1
-
-    writer.close()
-
-    print("Video saved:", video_path)
-
-    # writer.close()
 
     elapsed = (time.perf_counter() - start_time)
 
     simulated_seconds = (num_steps * base_env.cfg.decimation * base_env.cfg.sim.dt)
+
+    while simulation_app.is_running():
+        simulation_app.update()
 
     print()
     print("========== BENCHMARK ==========")
@@ -841,5 +615,4 @@ if __name__ == "__main__":
     print("================================")
 
     base_env.close()
-    simulation_app.close()
-
+    # simulation_app.close()
