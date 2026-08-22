@@ -34,10 +34,10 @@ class RB3(Robot):
         self.colors_dict = {"red": RED_MASK, "blue": BLUE_MASK}
         self._last_frame = None
 
-        self._tf_buffer = Buffer()
-        self._tf_listener = TransformListener(self._tf_buffer, self)
+        # self._tf_buffer = Buffer()
+        # self._tf_listener = TransformListener(self._tf_buffer, self)
 
-        self.timer = self.create_timer(0.1, self._tf_callback)
+        # self.timer = self.create_timer(0.1, self._tf_callback)
 
         self._image_subscriber = self.create_subscription(Image, '/image_wrapped', self._camera_callback, 10)
 
@@ -58,9 +58,9 @@ class RB3(Robot):
         #     1.0, self._publish_object)
 
         # move ok
-        # self.get_logger().info("Starting to move...")
-        # timer_period = 0.01  # seconds
-        # self.timer = self.create_timer(timer_period, self._move)
+        self.get_logger().info("Starting to move...")
+        timer_period = 0.01  # seconds
+        self.timer = self.create_timer(timer_period, self._move)
 
         # timer_period = 15  # seconds
         # self.timer = self.create_timer(timer_period, self.test)
@@ -160,14 +160,15 @@ class RB3(Robot):
         # apply mask
         return mask #cv2.bitwise_and(src, src, mask)
 
-    def _move(self, direction=-1, turn=-1, speed=0.25, turn_speed=0.25): # speed and turn_speed max 1
+    def _move(self, linear_velocity=0.25, angular_velocity=0.0): # max 1
+
         move_cmd = Twist()
-        move_cmd.linear.x = speed * direction # forward 1 backward -1
-        move_cmd.linear.y = speed * direction
-        move_cmd.linear.z = 0.0 # unused
-        move_cmd.angular.x = 0.0 # unused
-        move_cmd.angular.y = 0.0 # unused
-        move_cmd.angular.z = turn_speed * turn # left 1 right -1 when forward, opposite when backward
+        move_cmd.linear.x = linear_velocity # forward 1 backward -1
+        move_cmd.linear.y = 0.0
+        move_cmd.linear.z = 0.0 
+        move_cmd.angular.x = 0.0 
+        move_cmd.angular.y = 0.0 
+        move_cmd.angular.z = angular_velocity # left 1 right -1 when forward, opposite when backward
 
         self._twist_publisher.publish(move_cmd)
 

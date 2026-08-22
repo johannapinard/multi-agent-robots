@@ -55,6 +55,15 @@ ROVER_PATH = "_ROBOTS_/rover_rb3/Geometry/world/base_link"
 
 @configclass
 class CollisionEnvSceneCfg(InteractiveSceneCfg):
+
+    scene_cfg = AssetBaseCfg(
+        prim_path="{ENV_REGEX_NS}/scene", 
+        spawn=sim_utils.UsdFileCfg(
+            usd_path="/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/IsaacSim/multi_agent_robots.usd",
+            # articulation_props=ArticulationRootPropertiesCfg(fix_root_link=False),
+        ),
+    )
+        
     rover_rb3: ArticulationCfg = ArticulationCfg(
         prim_path="{ENV_REGEX_NS}/scene/" + ROVER_PATH,
         spawn=None, 
@@ -66,7 +75,7 @@ class CollisionEnvSceneCfg(InteractiveSceneCfg):
             "wheels": ImplicitActuatorCfg(
                 joint_names_expr=["wheel_fl_joint", "wheel_fr_joint", "wheel_rl_joint", "wheel_rr_joint"],
                 stiffness=0.0,
-                damping=10000.0,
+                damping=10.0,
             ),
         },
     )
@@ -99,14 +108,6 @@ class CollisionEnvRB3Cfg(DirectRLEnvCfg):
         env_spacing=12.0,
         replicate_physics=True,
         clone_in_fabric=True,
-    )
-
-    scene_cfg = AssetBaseCfg(
-        prim_path="{ENV_REGEX_NS}/scene", 
-        spawn=sim_utils.UsdFileCfg(
-            usd_path="/home/johanna/Workspaces/msc_project_ws/multi-agent-robots/IsaacSim/multi_agent_robots.usd",
-            articulation_props=ArticulationRootPropertiesCfg(fix_root_link=False),
-        ),
     )
 
     rew_gets_closer_to_goal = 0.1
@@ -175,9 +176,17 @@ class CollisionAvoidanceEnv(DirectRLEnv):
         self.actions[0] = self.cfg.linear_scale
         self.actions[1] = self.cfg.angular_scale
 
+        self.current_actions = torch.zeros(
+            (self.num_envs, self.cfg.action_space),
+            device=self.device,
+            dtype=torch.float32,
+        )
+
         self.goal_distance = torch.zeros(self.num_envs, device=self.device)
         self.collisions_array = torch.zeros(self.num_envs, dtype=torch.bool, device=self.device)
         self.is_too_close = torch.zeros(self.num_envs, dtype=torch.bool, device=self.device)
+
+        self._debug_action_counter = 0
 
         print("Collision env init done")
 
@@ -242,28 +251,13 @@ class CollisionAvoidanceEnv(DirectRLEnv):
     # -------------------------------------------------------------------------
 
     def _setup_scene(self):
-        print(">>> _setup_scene()")
+        print("Starting scene setup")
 
         env_regex = self.scene.env_regex_ns
 
-        usd_cfg = self.cfg.scene_cfg
-
-        # Spawn the USD once per environment.
-        for env_id in range(self.cfg.scene.num_envs):
-            prim_path = usd_cfg.prim_path.format(
-                ENV_REGEX_NS=f"/World/envs/env_{env_id}"
-            )
-
-            usd_cfg.spawn.func(
-                prim_path,
-                usd_cfg.spawn,
-                translation=(0.0, 0.0, 0.0),
-                orientation=(0.0, 0.0, 0.0, 1.0),
-            )
-
         stage = omni.usd.get_context().get_stage()
 
-        xgo_prim_path = f"{prim_path}/_ROBOTS_/xgo_lite"
+        xgo_prim_path = "{ENV_REGEX_NS}/_ROBOTS_/xgo_lite"
 
         xgo_prim = stage.GetPrimAtPath(xgo_prim_path)
 
@@ -271,8 +265,8 @@ class CollisionAvoidanceEnv(DirectRLEnv):
             xgo_prim.SetActive(False)
             print(f"[INFO] Disabled XGO: {xgo_prim_path}")
 
-        source_robot_path = f"{prim_path}/{ROVER_PATH}"
-        robot_prim = stage.GetPrimAtPath(source_robot_path)
+        # source_robot_path = f"{prim_path}/{ROVER_PATH}"
+        # robot_prim = stage.GetPrimAtPath(source_robot_path)
 
         contact_cfg = ContactSensorCfg(
             prim_path=f"{env_regex}/scene/{ROVER_PATH}",
@@ -283,7 +277,7 @@ class CollisionAvoidanceEnv(DirectRLEnv):
         )
         self.contact_sensor = ContactSensor(contact_cfg)
 
-        contact_prim_path = f"{prim_path}/{ROVER_PATH}"
+        contact_prim_path = "{ENV_REGEX_NS}/" + ROVER_PATH
 
         contact_prim = stage.GetPrimAtPath(contact_prim_path)
 
@@ -320,14 +314,10 @@ class CollisionAvoidanceEnv(DirectRLEnv):
         self.rover_rb3 = Articulation(self.cfg.scene.rover_rb3)
         self.scene.articulations["rover_rb3"] = self.rover_rb3
 
-        print(">>> _setup_scene() terminé avec succès, capteurs synchronisés.")
+        print(f"Spawned {self.cfg.scene.num_envs} envs.")
     
-        # context has not been updated yet here so this will not work
-        # stage = omni.usd.get_context().get_stage()
-
         print("ENV REGEX:", self.scene.env_regex_ns)
         print("CONTACT PRIM:", contact_cfg.prim_path)
-
 
 
     # -------------------------------------------------------------------------
@@ -335,7 +325,10 @@ class CollisionAvoidanceEnv(DirectRLEnv):
     # -------------------------------------------------------------------------
 
     def _pre_physics_step(self, actions: torch.Tensor) -> None:
-        self.actions = actions.clone()
+        self.current_actions = actions.to(device=self.device, dtype=torch.float32).clone()
+
+        # print("PRE PHYSICS ACTIONS:")
+        # print(self.current_actions)
 
 
     def _apply_action(self):
@@ -348,26 +341,49 @@ class CollisionAvoidanceEnv(DirectRLEnv):
         left_velocity = (linear_speed - angular_speed * self.wheel_base / 2.0)
         right_velocity = (linear_speed + angular_speed * self.wheel_base / 2.0)
 
+        left_angular = left_velocity / self.wheel_radius
+        right_angular = right_velocity / self.wheel_radius
+
         # velocities = self.rover_rb3_controller.forward([linear_speed, angular_speed])
         # left_velocity, right_velocity = velocities
 
         wheel_velocities = torch.stack(
             [
-                left_velocity,
-                right_velocity,
-                left_velocity,
-                right_velocity,
+                left_angular,
+                right_angular,
+                left_angular,
+                right_angular,
             ],
             dim=-1,
         )
 
-        self.rover_rb3.set_joint_velocity_target(wheel_velocities) # ignore warning as the proposed function uses Warp
+        print("========== APPLY ACTION ==========")
+        print("actions:")
+        print(self.actions)
+        print("wheel velocities:")
+        print(wheel_velocities)
+        print("==================================")
+
+        # wheel_velocities = torch.full(
+        #     (self.num_envs, 4),
+        #     5.0,
+        #     device=self.device,
+        #     dtype=torch.float32,
+        # )
+
+        # print("DIRECT WHEEL COMMAND:")
+        # print(wheel_velocities)
+
+        self.rover_rb3.write_joint_velocity_to_sim(wheel_velocities) # ignore warning as the proposed function uses Warp
+
+        self._debug_action_counter += 1
 
     # -------------------------------------------------------------------------
     # Observations
     # -------------------------------------------------------------------------
 
     def _get_observations(self) -> dict:
+        
         # get tag pose in isaac sim + noise
 
         # wp.to_torch avoids compatibility problems
@@ -571,34 +587,28 @@ if __name__ == "__main__":
     
     print("AFTER RESET")
 
-    num_steps = 100 # 50 000
+    num_steps = 2000 # 50 000
 
     start_time = time.perf_counter()
 
     print("training...")
     steps_done = 0
-    for step in range(num_steps):
+
+    for step in range(100000):
 
         actions = torch.zeros(
-            (
-                base_env.num_envs,  
-                base_env.cfg.action_space,
-            ),
+            (base_env.num_envs, base_env.cfg.action_space),
             device=base_env.device,
         )
 
-        obs, rewards, terminated, truncated, info = (base_env.step(actions))
-
+        obs, rewards, terminated, truncated, info = base_env.step(actions)
         simulation_app.update()
 
-        steps_done +=1
+        steps_done += 1
 
     elapsed = (time.perf_counter() - start_time)
 
     simulated_seconds = (num_steps * base_env.cfg.decimation * base_env.cfg.sim.dt)
-
-    while simulation_app.is_running():
-        simulation_app.update()
 
     print()
     print("========== BENCHMARK ==========")
@@ -615,4 +625,4 @@ if __name__ == "__main__":
     print("================================")
 
     base_env.close()
-    # simulation_app.close()
+    simulation_app.close()

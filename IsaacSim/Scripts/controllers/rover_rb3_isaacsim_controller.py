@@ -17,9 +17,21 @@ cmd_vel_pub = None
 
 # rclpy.init()
 
+linear_speed = 0.0 #-0.1 # negative forward, positive backward
+angular_speed = 0.0 # negative left, positive right
+
+def cmd_vel_callback(msg):
+    global linear_speed, angular_speed
+    print(msg)
+
+    linear_speed = msg.linear.x
+    angular_speed = msg.angular.z
+
 cmd_vel_node = rclpy.create_node("rb3_cmd_vel_publisher")
 
 cmd_vel_pub = cmd_vel_node.create_publisher(Twist, "/cmd_vel_executed", 10)
+
+cmd_vel_sub = cmd_vel_node.create_subscription(Twist, '/cmd_vel', cmd_vel_callback, 10)
 
 
 input_iface = carb.input.acquire_input_interface()
@@ -27,9 +39,6 @@ keyboard = omni.appwindow.get_default_app_window().get_keyboard()
 rover_rb3_controller = None
 robot = None
 drive = False
-
-linear_speed = -0.1 # negative forward, positive backward
-angular_speed = 0.0 # negative left, positive right
 
 def keyboard_callback(event, *args):
     global drive
@@ -51,23 +60,23 @@ def publish_cmd_vel():
     cmd_vel_pub.publish(msg)
 
 def update(dt):
-    global drive
-    if drive:
-        velocities = rover_rb3_controller.forward([linear_speed, angular_speed])
-        left, right = velocities # returns velocities for two-wheeled robots
+    # global drive
+    # if drive:
+    velocities = rover_rb3_controller.forward([-linear_speed, angular_speed])
+    left, right = velocities # returns velocities for two-wheeled robots
 
-        four_wheels_velocities = [
-            left,   # FL
-            right,  # FR
-            left,   # RL
-            right,  # RR
-        ]
+    four_wheels_velocities = [
+        left,   # FL
+        right,  # FR
+        left,   # RL
+        right,  # RR
+    ]
 
-        robot.apply_wheel_actions(four_wheels_velocities)
+    robot.apply_wheel_actions(four_wheels_velocities)
 
-        publish_cmd_vel()
+    # publish_cmd_vel()
 
-        rclpy.spin_once(cmd_vel_node, timeout_sec=0.0)
+    rclpy.spin_once(cmd_vel_node, timeout_sec=0.0)
 
 
 async def main():
