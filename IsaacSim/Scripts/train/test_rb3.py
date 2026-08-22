@@ -187,19 +187,14 @@ class TestDirectEnv(DirectRLEnv):
         # velocities = self.rover_rb3_controller.forward([linear_speed, angular_speed])
         # left_velocity, right_velocity = velocities
 
-        # wheel_velocities = torch.stack(
-        #     [
-        #         left_angular,
-        #         right_angular,
-        #         left_angular,
-        #         right_angular,
-        #     ],
-        #     dim=-1,
-        # )
-
-        wheel_velocities = torch.tensor(
-            [[5.0, 5.0, 5.0, 5.0]],
-            device=env.device,
+        wheel_velocities = torch.stack(
+            [
+                left_angular,
+                right_angular,
+                left_angular,
+                right_angular,
+            ],
+            dim=-1,
         )
 
         self.scene["rover_rb3"].write_joint_velocity_to_sim(wheel_velocities) # ignore warning as the proposed function uses Warp
@@ -294,13 +289,14 @@ if __name__ == "__main__":
     for episodes in range(30):
         for step in range(100):
 
-            actions = torch.zeros(
-                (env.num_envs, env.cfg.action_space),
-                device=env.device,
+            actions = (
+                torch.rand(
+                    (env.num_envs, env.cfg.action_space),
+                    device=env.device,
+                )
+                * 2.0
+                - 1.0
             )
-
-            actions[:, 0] = 0.25   # forward
-            actions[:, 1] = 0.0    # angular
 
             obs, rewards, terminated, truncated, info = env.step(actions)
             simulation_app.update()
@@ -314,6 +310,9 @@ if __name__ == "__main__":
                     f"STEP {step:03d} | "
                     f"root velocity = {rover_rb3.data.root_lin_vel_w}"
                 )
+
+                # if torch.any(terminated) or torch.any(truncated):
+                #     break
 
             simulation_app.update()
 
